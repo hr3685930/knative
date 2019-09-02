@@ -613,7 +613,7 @@ metadata:
   name: queue-proxy
   namespace: knative-serving
 spec:
-  image: hr3685930/knative-images:queue
+  image: hr3685930/knative-images-images:queue
 
 ---
 apiVersion: apps/v1
@@ -657,7 +657,7 @@ spec:
               value: config-observability
             - name: METRICS_DOMAIN
               value: knative.dev/serving
-          image: hr3685930/knative-images:activator
+          image: hr3685930/knative-images-images:activator
           livenessProbe:
             httpGet:
               httpHeaders:
@@ -744,7 +744,7 @@ spec:
               value: config-observability
             - name: METRICS_DOMAIN
               value: knative.dev/serving
-          image: hr3685930/knative-images:autoscaler-hpa
+          image: hr3685930/knative-images-images:autoscaler-hpa
           name: autoscaler-hpa
           ports:
             - containerPort: 9090
@@ -824,7 +824,7 @@ spec:
               value: config-observability
             - name: METRICS_DOMAIN
               value: knative.dev/serving
-          image: hr3685930/knative-images:autoscaler
+          image: hr3685930/knative-images-images:autoscaler
           livenessProbe:
             httpGet:
               httpHeaders:
@@ -1525,7 +1525,7 @@ spec:
               value: config-observability
             - name: METRICS_DOMAIN
               value: knative.dev/serving
-          image: hr3685930/knative-images:controller
+          image: hr3685930/knative-images-images:controller
           name: controller
           ports:
             - containerPort: 9090
@@ -1594,7 +1594,7 @@ spec:
               value: config-observability
             - name: METRICS_DOMAIN
               value: knative.dev/serving
-          image: hr3685930/knative-images:networking
+          image: hr3685930/knative-images-images:networking
           name: networking-istio
           ports:
             - containerPort: 9090
@@ -1646,7 +1646,7 @@ spec:
               value: config-observability
             - name: METRICS_DOMAIN
               value: knative.dev/serving
-          image: hr3685930/knative-images:webhook
+          image: hr3685930/knative-images-images:webhook
           name: webhook
           ports:
             - containerPort: 9090
