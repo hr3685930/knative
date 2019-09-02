@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41d0e40c-7e0b-44eb-ac92-49ab81057b56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/knative-eventing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knative-monitoring.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knative-serving.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serving/queue/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knative-serving.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/knative-serving.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/knative-serving.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="615" column="134" lean-forward="true" selection-start-line="615" selection-start-column="9" selection-end-line="615" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serving/queue/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="155">
+              <caret line="699" column="5" lean-forward="true" selection-start-line="699" selection-start-column="5" selection-end-line="699" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -39,6 +27,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>image</find>
+      <find>ClusterRole</find>
       <find>image:</find>
     </findStrings>
   </component>
@@ -57,8 +46,15 @@
         <option value="$PROJECT_DIR$/serving/webhook/Dockerfile" />
         <option value="$PROJECT_DIR$/knative-init.yaml" />
         <option value="$PROJECT_DIR$/knative-eventing.yaml" />
-        <option value="$PROJECT_DIR$/knative-serving.yaml" />
         <option value="$PROJECT_DIR$/serving/queue/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/controller/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/in_memory_channel_controller/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/in_memory_channel_dispatcher/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/in_memory_controller/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/in_memory_dispatcher/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/sources_controller/Dockerfile" />
+        <option value="$PROJECT_DIR$/eventing/webhook/Dockerfile" />
+        <option value="$PROJECT_DIR$/knative-serving.yaml" />
       </list>
     </option>
   </component>
@@ -81,49 +77,60 @@
             <path>
               <item name="knative" type="b2602c69:ProjectViewProjectNode" />
               <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="serving" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="knative" type="b2602c69:ProjectViewProjectNode" />
               <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="serving" type="462c0819:PsiDirectoryNode" />
-              <item name="activator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="serving" type="462c0819:PsiDirectoryNode" />
-              <item name="autoscaler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="serving" type="462c0819:PsiDirectoryNode" />
-              <item name="autoscaler-hpa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="serving" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="knative" type="b2602c69:ProjectViewProjectNode" />
               <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
+              <item name="in_memory_channel_controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
+              <item name="in_memory_channel_dispatcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
+              <item name="in_memory_controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
+              <item name="in_memory_dispatcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
+              <item name="sources_controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="eventing" type="462c0819:PsiDirectoryNode" />
+              <item name="webhook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
               <item name="serving" type="462c0819:PsiDirectoryNode" />
-              <item name="networking" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="knative" type="b2602c69:ProjectViewProjectNode" />
               <item name="knative" type="462c0819:PsiDirectoryNode" />
               <item name="serving" type="462c0819:PsiDirectoryNode" />
               <item name="queue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="knative" type="462c0819:PsiDirectoryNode" />
-              <item name="serving" type="462c0819:PsiDirectoryNode" />
-              <item name="webhook" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,12 +172,12 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -245,17 +252,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knative-serving.yaml">
+    <entry file="file://$PROJECT_DIR$/eventing/webhook/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="615" column="134" lean-forward="true" selection-start-line="615" selection-start-column="9" selection-end-line="615" selection-end-column="134" />
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventing/sources_controller/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="151" selection-start-column="151" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventing/in_memory_dispatcher/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="153" selection-start-column="153" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventing/in_memory_controller/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="153" selection-start-column="153" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventing/in_memory_channel_dispatcher/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="161" selection-start-column="161" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventing/in_memory_channel_controller/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="161" selection-start-column="161" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventing/controller/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serving/queue/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knative-serving.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="699" column="5" lean-forward="true" selection-start-line="699" selection-start-column="5" selection-end-line="699" selection-end-column="5" />
         </state>
       </provider>
     </entry>
