@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41d0e40c-7e0b-44eb-ac92-49ab81057b56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knative-eventing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knative-monitoring.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knative-serving.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serving/queue/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,60 +17,30 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serving/activator/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/knative-serving.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="134" selection-start-column="134" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serving/autoscaler/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serving/autoscaler-hpa/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="139" selection-start-column="139" selection-end-column="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serving/controller/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="135" selection-start-column="135" selection-end-column="135" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serving/networking/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="141" selection-start-column="141" selection-end-column="141" />
+            <state relative-caret-position="163">
+              <caret line="615" column="134" lean-forward="true" selection-start-line="615" selection-start-column="9" selection-end-line="615" selection-end-column="134" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serving/webhook/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/serving/queue/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="132" selection-start-column="132" selection-end-column="132" />
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>image</find>
+      <find>image:</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.12/libexec" />
   <component name="Git.Settings">
@@ -81,6 +55,10 @@
         <option value="$PROJECT_DIR$/serving/controller/Dockerfile" />
         <option value="$PROJECT_DIR$/serving/networking/Dockerfile" />
         <option value="$PROJECT_DIR$/serving/webhook/Dockerfile" />
+        <option value="$PROJECT_DIR$/knative-init.yaml" />
+        <option value="$PROJECT_DIR$/knative-eventing.yaml" />
+        <option value="$PROJECT_DIR$/knative-serving.yaml" />
+        <option value="$PROJECT_DIR$/serving/queue/Dockerfile" />
       </list>
     </option>
   </component>
@@ -139,6 +117,12 @@
               <item name="knative" type="b2602c69:ProjectViewProjectNode" />
               <item name="knative" type="462c0819:PsiDirectoryNode" />
               <item name="serving" type="462c0819:PsiDirectoryNode" />
+              <item name="queue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="knative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="knative" type="462c0819:PsiDirectoryNode" />
+              <item name="serving" type="462c0819:PsiDirectoryNode" />
               <item name="webhook" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -158,6 +142,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -181,7 +170,7 @@
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -200,45 +189,73 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/serving/activator/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/knative-eventing.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="134" selection-start-column="134" selection-end-column="134" />
+        <state relative-caret-position="477">
+          <caret line="2765" lean-forward="true" selection-start-line="2765" selection-end-line="2765" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serving/autoscaler/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/knative-monitoring.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serving/autoscaler-hpa/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="139" selection-start-column="139" selection-end-column="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serving/controller/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="135" selection-start-column="135" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serving/networking/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="141" selection-start-column="141" selection-end-column="141" />
+        <state relative-caret-position="402">
+          <caret line="11520" column="28" lean-forward="true" selection-start-line="11520" selection-start-column="28" selection-end-line="11520" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serving/webhook/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="132" selection-start-column="132" selection-end-column="132" />
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving/controller/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="63" selection-start-column="53" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving/autoscaler-hpa/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" selection-start-column="53" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving/autoscaler/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="63" selection-start-column="53" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving/networking/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving/activator/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="62" selection-start-column="53" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knative-serving.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="615" column="134" lean-forward="true" selection-start-line="615" selection-start-column="9" selection-end-line="615" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serving/queue/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
