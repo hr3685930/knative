@@ -1,0 +1,41 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker pull gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
+           docker tag gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
+           docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
+
+          docker pull gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler@sha256:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2
+          docker tag gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler@sha256:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-autoscaler:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2
+          docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-autoscaler:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2
+
+          docker pull gcr.io/knative-releases/knative.dev/serving/cmd/controller@sha256:bac158dfb0c73d13ed42266ba287f1a86192c0ba581e23fbe012d30a1c34837c
+          docker tag gcr.io/knative-releases/knative.dev/serving/cmd/controller@sha256:bac158dfb0c73d13ed42266ba287f1a86192c0ba581e23fbe012d30a1c34837c registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-controller:bac158dfb0c73d13ed42266ba287f1a86192c0ba581e23fbe012d30a1c34837c
+          docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-controller:bac158dfb0c73d13ed42266ba287f1a86192c0ba581e23fbe012d30a1c34837c
+
+          docker pull gcr.io/knative-releases/knative.dev/serving/cmd/domain-mapping@sha256:e384a295069b9e10e509fc3986cce4fe7be4ff5c73413d1c2234a813b1f4f99b
+          docker tag gcr.io/knative-releases/knative.dev/serving/cmd/domain-mapping@sha256:e384a295069b9e10e509fc3986cce4fe7be4ff5c73413d1c2234a813b1f4f99b registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-domain-mapping:e384a295069b9e10e509fc3986cce4fe7be4ff5c73413d1c2234a813b1f4f99b
+          docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-domain-mapping:e384a295069b9e10e509fc3986cce4fe7be4ff5c73413d1c2234a813b1f4f99b
+
+          docker pull gcr.io/knative-releases/knative.dev/serving/cmd/domain-mapping-webhook@sha256:15f1ce7f35b4765cc3b1c073423ab8d8bf2c8c2630eea3995c610f520fb68ca0
+          docker tag gcr.io/knative-releases/knative.dev/serving/cmd/domain-mapping-webhook@sha256:15f1ce7f35b4765cc3b1c073423ab8d8bf2c8c2630eea3995c610f520fb68ca0 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-domain-mapping-webhook:15f1ce7f35b4765cc3b1c073423ab8d8bf2c8c2630eea3995c610f520fb68ca0
+          docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-domain-mapping-webhook:15f1ce7f35b4765cc3b1c073423ab8d8bf2c8c2630eea3995c610f520fb68ca0
+
+          docker pull gcr.io/knative-releases/knative.dev/serving/cmd/webhook@sha256:1282a399cbb94f3b9de4f199239b39e795b87108efe7d8ba0380147160a97abb
+          docker tag gcr.io/knative-releases/knative.dev/serving/cmd/webhook@sha256:1282a399cbb94f3b9de4f199239b39e795b87108efe7d8ba0380147160a97abb registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-webhook:1282a399cbb94f3b9de4f199239b39e795b87108efe7d8ba0380147160a97abb
+          docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-webhook:1282a399cbb94f3b9de4f199239b39e795b87108efe7d8ba0380147160a97abb
+
