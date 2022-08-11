@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
+          docker login -u herui@yiqizhangda -p wyj15881894988 registry.cn-shanghai.aliyuncs.com
           docker pull gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7 
           docker tag gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
           docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
