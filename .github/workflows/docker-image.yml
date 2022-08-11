@@ -15,9 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker pull gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
-           docker tag gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
-           docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
+      run: |
+          docker pull gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7 
+          docker tag gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
+          docker push registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-activator:08315309da4b219ec74bb2017f569a98a7cfecee5e1285b03dfddc2410feb7d7
 
           docker pull gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler@sha256:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2
           docker tag gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler@sha256:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2 registry.cn-shanghai.aliyuncs.com/kid17-devops/knative-serving-autoscaler:105bdd14ecaabad79d9bbcb8359bf2c317bd72382f80a7c4a335adfea53844f2
